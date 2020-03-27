@@ -386,6 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d1a7b099f074945957aaa762fd59ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSitting: 0
 --- !u!114 &284761112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,6 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0725e426e681d9147ae53fe23e5d4177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFollowing: 0
 --- !u!4 &336673359 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1076409542896363890, guid: 475bd2d152d0b4663b39f812443d9aa5,
@@ -893,6 +895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d1a7b099f074945957aaa762fd59ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSitting: 0
 --- !u!114 &1472469044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -905,6 +908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0725e426e681d9147ae53fe23e5d4177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFollowing: 0
 --- !u!1 &1687110384 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1076409542896363894, guid: 475bd2d152d0b4663b39f812443d9aa5,
@@ -1024,6 +1028,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1076409542896363885, guid: 475bd2d152d0b4663b39f812443d9aa5,
+        type: 3}
+      propertyPath: speed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1076409542896363890, guid: 475bd2d152d0b4663b39f812443d9aa5,
         type: 3}
       propertyPath: m_LocalPosition.x
