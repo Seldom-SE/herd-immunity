@@ -26,6 +26,11 @@ public class AnimalMovement : MonoBehaviour
             if (displacement.magnitude < terrorDetectionRadius)
             {
                 agent.destination = transform.position + displacement.normalized * fleeDistance;
+                // Priority given to running from doggos
+                if (terror.CompareTag("Dog"))
+                {
+                    break;
+                }
             }
         }
         

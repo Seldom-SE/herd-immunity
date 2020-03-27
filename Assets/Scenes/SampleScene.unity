@@ -251,6 +251,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   terrors:
   - {fileID: 336673359}
+  - {fileID: 284761113}
+  - {fileID: 1472469045}
   terrorDetectionRadius: 10
   fleeDistance: 5
 --- !u!1001 &284761107
@@ -400,6 +402,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFollowing: 0
+--- !u!4 &284761113 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 2c0a99a49d93d45afaa5b9fb223642a0,
+    type: 3}
+  m_PrefabInstance: {fileID: 284761107}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &336673359 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1076409542896363890, guid: 475bd2d152d0b4663b39f812443d9aa5,
@@ -606,6 +614,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   terrors:
   - {fileID: 336673359}
+  - {fileID: 284761113}
+  - {fileID: 1472469045}
   terrorDetectionRadius: 10
   fleeDistance: 5
 --- !u!195 &772760959
@@ -738,6 +748,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   terrors:
   - {fileID: 336673359}
+  - {fileID: 284761113}
+  - {fileID: 1472469045}
   terrorDetectionRadius: 10
   fleeDistance: 5
 --- !u!195 &1098414164
@@ -909,6 +921,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFollowing: 0
+--- !u!4 &1472469045 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 2c0a99a49d93d45afaa5b9fb223642a0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1472469039}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1687110384 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1076409542896363894, guid: 475bd2d152d0b4663b39f812443d9aa5,
