@@ -255,6 +255,8 @@ MonoBehaviour:
   - {fileID: 1472469045}
   terrorDetectionRadius: 10
   fleeDistance: 5
+  meanderRadius: 20
+  maxIdleTime: 1000
 --- !u!1001 &284761107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -401,6 +403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0725e426e681d9147ae53fe23e5d4177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alphaWolf: 1
   isFollowing: 0
 --- !u!4 &284761113 stripped
 Transform:
@@ -618,6 +621,8 @@ MonoBehaviour:
   - {fileID: 1472469045}
   terrorDetectionRadius: 10
   fleeDistance: 5
+  meanderRadius: 20
+  maxIdleTime: 1000
 --- !u!195 &772760959
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -752,6 +757,8 @@ MonoBehaviour:
   - {fileID: 1472469045}
   terrorDetectionRadius: 10
   fleeDistance: 5
+  meanderRadius: 20
+  maxIdleTime: 1000
 --- !u!195 &1098414164
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -920,6 +927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0725e426e681d9147ae53fe23e5d4177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alphaWolf: 0
   isFollowing: 0
 --- !u!4 &1472469045 stripped
 Transform:

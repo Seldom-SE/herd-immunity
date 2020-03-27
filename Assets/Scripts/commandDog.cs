@@ -31,34 +31,52 @@ public class commandDog : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1")) // change next available dog to sit
+        if (Input.GetButtonDown("Fire1")) // Call dog 1
         {
-            if (followStack.Count > 0)
+            //if (followStack.Count > 0)
+            //{
+            //    GameObject dog = followStack.Pop();
+            //    sit dogSit = dog.GetComponent<sit>();
+            //    follow dogFollow = dog.GetComponent<follow>();
+            //    //if (!dogSit.isSitting)
+            //    //{
+            //    dogSit.isSitting = true;
+            //    dogFollow.isFollowing = false;
+            //    //}
+            //    sitStack.Push(dog);
+            //}
+
+            foreach (GameObject dog in dogs)
             {
-                GameObject dog = followStack.Pop();
-                sit dogSit = dog.GetComponent<sit>();
-                follow dogFollow = dog.GetComponent<follow>();
-                //if (!dogSit.isSitting)
-                //{
-                dogSit.isSitting = true;
-                dogFollow.isFollowing = false;
-                //}
-                sitStack.Push(dog);
+                follow follow = dog.GetComponent<follow>();
+                if (follow.alphaWolf)
+                {
+                    follow.goTo(transform.position);
+                }
             }
         }
-        if (Input.GetButtonDown("Fire2")) // change next available dog to follow
+        if (Input.GetButtonDown("Fire2")) // Call dog 2
         {
-            if (sitStack.Count > 0)
+            //if (sitStack.Count > 0)
+            //{
+            //    GameObject dog = sitStack.Pop();
+            //    sit dogSit = dog.GetComponent<sit>();
+            //    follow dogFollow = dog.GetComponent<follow>();
+            //    //if (!dogSit.isSitting)
+            //    //{
+            //    dogSit.isSitting = false;
+            //    dogFollow.isFollowing = true;
+            //    //}
+            //    followStack.Push(dog);
+            //}
+
+            foreach (GameObject dog in dogs)
             {
-                GameObject dog = sitStack.Pop();
-                sit dogSit = dog.GetComponent<sit>();
-                follow dogFollow = dog.GetComponent<follow>();
-                //if (!dogSit.isSitting)
-                //{
-                dogSit.isSitting = false;
-                dogFollow.isFollowing = true;
-                //}
-                followStack.Push(dog);
+                follow follow = dog.GetComponent<follow>();
+                if (!follow.alphaWolf)
+                {
+                    follow.goTo(transform.position);
+                }
             }
         }
     }
