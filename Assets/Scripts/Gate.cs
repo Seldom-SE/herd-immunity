@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Gate : MonoBehaviour {
-    [SerializeField] private float pivotX;
+    [SerializeField] private float pivotX = 0.85f;
     private Vector3 initialPosition;
     private Vector3 initialEulerAngles;
     
