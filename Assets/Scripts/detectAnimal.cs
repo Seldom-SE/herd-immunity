@@ -10,6 +10,10 @@ public class detectAnimal : MonoBehaviour
     private GameObject[] animalArr;
     private int maxAnimals;
 
+    public AudioSource AnimalSound;
+
+    public GameObject completedMessage;
+
     public bool winnable = false;
     // Start is called before the first frame update
     void Start()
@@ -17,6 +21,7 @@ public class detectAnimal : MonoBehaviour
         animals = 0;
         animalArr = GameObject.FindGameObjectsWithTag(animalTag);
         maxAnimals = animalArr.Length;
+        completedMessage.SetActive(false);
     }
 
     // Update is called once per frame
@@ -33,6 +38,9 @@ public class detectAnimal : MonoBehaviour
             if(animals == maxAnimals){
                 UnityEngine.Debug.Log(animalTag + " win");
                 winnable = true;
+                completedMessage.SetActive(true);
+                AnimalSound.Play();
+                DestroySound(2f);
             }
         }
     }
@@ -44,5 +52,12 @@ public class detectAnimal : MonoBehaviour
 
             winnable = false;
         }
+    }
+
+     IEnumerator DestroySound(float time)  //Prevent constant animal sound
+     {
+         yield return new WaitForSeconds(time);
+ 
+        Destroy(AnimalSound);
     }
 }
