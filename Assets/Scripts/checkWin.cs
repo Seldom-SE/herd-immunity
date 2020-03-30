@@ -6,6 +6,9 @@ public class checkWin : MonoBehaviour
 {
     private GameObject[] detectors;
     public bool winState = false;
+
+    public AudioSource winSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +22,16 @@ public class checkWin : MonoBehaviour
             foreach(GameObject detector in detectors){
                 if(detector.GetComponent<detectAnimal>().winnable){
                     winState = true;
-                    UnityEngine.Debug.Log("WIN!");
                 }
+                else{
+                    winState = false;
+                    break;
+}
             }
+            if(winState){
+            UnityEngine.Debug.Log("WIN!");
+            winSound.Play();
+}
         }
     }
 }

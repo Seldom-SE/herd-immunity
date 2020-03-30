@@ -133,6 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceToTouch: 30
   raycastYAxisAdd: 15
+  eKey: {fileID: 0}
 --- !u!114 &-2218050802796762509
 MonoBehaviour:
   m_ObjectHideFlags: 0
