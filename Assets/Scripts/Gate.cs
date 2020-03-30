@@ -6,6 +6,11 @@ public class Gate : MonoBehaviour {
     [SerializeField] private float pivotX = 0.85f;
     private Vector3 initialPosition;
     private Vector3 initialEulerAngles;
+
+     public AudioSource randomSound;
+ 
+     public AudioClip[] audioSources;
+ 
     
     public bool open;
     
@@ -27,6 +32,7 @@ public class Gate : MonoBehaviour {
         
         gameObject.transform.RotateAround(transform.TransformPoint(pivotPoint), Vector3.up, rotateAngle);
         open = true;
+        RandomSoundness();
     }
     
     void Close() {
@@ -34,5 +40,12 @@ public class Gate : MonoBehaviour {
         gameObject.transform.position = initialPosition;
         gameObject.transform.eulerAngles = initialEulerAngles;
         open = false;
+        RandomSoundness();
     }
+
+     void RandomSoundness()
+     {
+         randomSound.clip = audioSources[Random.Range(0, audioSources.Length)];
+         randomSound.Play ();
+     }
 }
