@@ -18,12 +18,15 @@ public class checkWin : MonoBehaviour
 
     public Text timerText;
 
+    private float gameLost;
+
     // Start is called before the first frame update
     void Start()
     {
         detectors = GameObject.FindGameObjectsWithTag("Detector");
         loseMessage.SetActive(false);
         winMessage.SetActive(false);
+        gameLost = 0;
     }
 
     // Update is called once per frame
@@ -39,7 +42,7 @@ public class checkWin : MonoBehaviour
                     break;
 }
             }
-            if(winState){
+            if(winState && gameLost==0){
             UnityEngine.Debug.Log("WIN!");
             winSound.Play();
             winMessage.SetActive(true);
@@ -50,12 +53,20 @@ public class checkWin : MonoBehaviour
         string minutes = ((int) gameTime/60).ToString();
         string seconds = (gameTime % 60).ToString("f0");
 
+        if(gameTime > 0){
+
         timerText.text= minutes + ":" + seconds;
+        }
+        else if(gameTime<0)
+        {
+            timerText.text= "";
+        }
 
 
         if(gameTime < 0)
         { //LOSE
             loseMessage.SetActive(true);
+            gameLost = 1;
         }
     }
 }
