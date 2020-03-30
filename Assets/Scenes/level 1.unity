@@ -1185,7 +1185,7 @@ NavMeshObstacle:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129105537}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Shape: 1
   m_Extents: {x: 2.2340002, y: 2.2470002, z: 2.513}
@@ -1714,6 +1714,114 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 241687043}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &287523150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 287523154}
+  - component: {fileID: 287523153}
+  - component: {fileID: 287523152}
+  - component: {fileID: 287523151}
+  - component: {fileID: 287523155}
+  m_Layer: 0
+  m_Name: sheep detector
+  m_TagString: Detector
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &287523151
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287523150}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &287523152
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287523150}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &287523153
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287523150}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &287523154
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287523150}
+  m_LocalRotation: {x: -0, y: -0.055752624, z: -0, w: 0.9984446}
+  m_LocalPosition: {x: 507.9, y: 9.1, z: 619.3}
+  m_LocalScale: {x: 190, y: 10, z: 60}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 45
+  m_LocalEulerAnglesHint: {x: 0, y: -6.392, z: 0}
+--- !u!114 &287523155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287523150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95330551da6bff247a8d87afbae316e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalTag: Sheep
+  winnable: 0
 --- !u!1001 &299260150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1783,6 +1891,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4a23d2652acc4e21a6904ebdde289a0, type: 3}
+--- !u!1 &299468555 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6741993538534065230, guid: 63d9314d1e0284d62a99ee594e86f4d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1169964323}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &299468556
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299468555}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &299468561
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299468555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1001 &321616073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2541,6 +2684,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &433721591 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6741993538534065230, guid: 63d9314d1e0284d62a99ee594e86f4d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1149038137}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &433721592
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433721591}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &433721597
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433721591}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1001 &455095337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3356,6 +3534,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 545850352}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &566680696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2499797793019898468, guid: d56c79125f30c874e956e33ab927daba,
+    type: 3}
+  m_PrefabInstance: {fileID: 1193945178}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &566680697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566680696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 009be77c23fd9e049933ef15bf102fbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winState: 0
 --- !u!1 &597269738
 GameObject:
   m_ObjectHideFlags: 0
@@ -4104,6 +4301,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Horse
       objectReference: {fileID: 0}
+    - target: {fileID: 1979871360922463132, guid: 7ff9e4db718be4347b2d89c7bb8b3e6d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Horse
+      objectReference: {fileID: 0}
     - target: {fileID: 3252359087548422543, guid: 7ff9e4db718be4347b2d89c7bb8b3e6d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4308,7 +4510,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 782c184f086770b4eb5c648eb1d2b5f8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9
+      value: 4.3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 782c184f086770b4eb5c648eb1d2b5f8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4391,7 +4593,7 @@ NavMeshObstacle:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 777810236}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Shape: 1
   m_Extents: {x: 2.2340002, y: 2.2470002, z: 2.513}
@@ -4676,6 +4878,41 @@ Transform:
   m_Father: {fileID: 619437850}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -267.305, z: 0}
+--- !u!1 &793887320 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6701262232907541883, guid: a08810514189443188530edfad5cd765,
+    type: 3}
+  m_PrefabInstance: {fileID: 1907519447}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &793887321
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793887320}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &793887326
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793887320}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1001 &804780547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5129,6 +5366,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6701262232907541883, guid: a08810514189443188530edfad5cd765,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sheep
+      objectReference: {fileID: 0}
     - target: {fileID: 7684534758837526376, guid: a08810514189443188530edfad5cd765,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5380,6 +5622,41 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 905077946}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &923588076 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6701262232907541883, guid: a08810514189443188530edfad5cd765,
+    type: 3}
+  m_PrefabInstance: {fileID: 861535200}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &923588077
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923588076}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &923588082
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923588076}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1001 &950781859
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6960,6 +7237,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pig (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6741993538534065230, guid: 63d9314d1e0284d62a99ee594e86f4d9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pig
+      objectReference: {fileID: 0}
     - target: {fileID: 7767309403930998365, guid: 63d9314d1e0284d62a99ee594e86f4d9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7044,6 +7326,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6701262232907541883, guid: a08810514189443188530edfad5cd765,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sheep
+      objectReference: {fileID: 0}
     - target: {fileID: 7684534758837526376, guid: a08810514189443188530edfad5cd765,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7127,6 +7414,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pig (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741993538534065230, guid: 63d9314d1e0284d62a99ee594e86f4d9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pig
       objectReference: {fileID: 0}
     - target: {fileID: 7767309403930998365, guid: 63d9314d1e0284d62a99ee594e86f4d9,
         type: 3}
@@ -7379,6 +7671,114 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebbaf3ac6a54ecc4b8067913a511b065, type: 3}
+--- !u!1 &1175599571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1175599575}
+  - component: {fileID: 1175599574}
+  - component: {fileID: 1175599573}
+  - component: {fileID: 1175599572}
+  - component: {fileID: 1175599576}
+  m_Layer: 0
+  m_Name: horse detector
+  m_TagString: Detector
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1175599572
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175599571}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1175599573
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175599571}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1175599574
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175599571}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1175599575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175599571}
+  m_LocalRotation: {x: -0, y: -0.05566043, z: -0, w: 0.9984498}
+  m_LocalPosition: {x: 462.4, y: 6.2, z: 500}
+  m_LocalScale: {x: 300, y: 10, z: 180}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 44
+  m_LocalEulerAnglesHint: {x: 0, y: -6.3820004, z: 0}
+--- !u!114 &1175599576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175599571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95330551da6bff247a8d87afbae316e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalTag: Horse
+  winnable: 0
 --- !u!1001 &1177718000
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7453,6 +7853,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebbaf3ac6a54ecc4b8067913a511b065, type: 3}
+--- !u!1 &1185028677 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1979871360922463132, guid: 7ff9e4db718be4347b2d89c7bb8b3e6d,
+    type: 3}
+  m_PrefabInstance: {fileID: 767874050}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1185028678
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185028677}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1185028683
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185028677}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1001 &1193945178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9101,6 +9536,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Horse (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1979871360922463132, guid: 7ff9e4db718be4347b2d89c7bb8b3e6d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Horse
+      objectReference: {fileID: 0}
     - target: {fileID: 3252359087548422543, guid: 7ff9e4db718be4347b2d89c7bb8b3e6d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9319,6 +9759,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1511230795 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1979871360922463132, guid: 7ff9e4db718be4347b2d89c7bb8b3e6d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1456059839}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1511230796
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511230795}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1511230801
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511230795}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1001 &1511599469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9777,6 +10252,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1538817925 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6701262232907541883, guid: a08810514189443188530edfad5cd765,
+    type: 3}
+  m_PrefabInstance: {fileID: 1154843704}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1538817926
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538817925}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1538817931
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538817925}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1001 &1541506685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10691,7 +11201,7 @@ PrefabInstance:
     - target: {fileID: 3364666597041118556, guid: 63d9314d1e0284d62a99ee594e86f4d9,
         type: 3}
       propertyPath: m_Speed
-      value: 80000
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3364666597041118556, guid: 63d9314d1e0284d62a99ee594e86f4d9,
         type: 3}
@@ -10701,11 +11211,16 @@ PrefabInstance:
     - target: {fileID: 3364666597041118556, guid: 63d9314d1e0284d62a99ee594e86f4d9,
         type: 3}
       propertyPath: m_AngularSpeed
-      value: 80000
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 6741993538534065230, guid: 63d9314d1e0284d62a99ee594e86f4d9,
         type: 3}
       propertyPath: m_Name
+      value: Pig
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741993538534065230, guid: 63d9314d1e0284d62a99ee594e86f4d9,
+        type: 3}
+      propertyPath: m_TagString
       value: Pig
       objectReference: {fileID: 0}
     - target: {fileID: 7767309403930998365, guid: 63d9314d1e0284d62a99ee594e86f4d9,
@@ -10898,6 +11413,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1674310545}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &1714245145
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714245144}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &1714245149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10911,6 +11442,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedForAnimal: 40000
+--- !u!65 &1714245151
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714245144}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1001 &1715181553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11201,7 +11745,7 @@ NavMeshObstacle:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730783988}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Shape: 1
   m_Extents: {x: 2.2340002, y: 2.2470002, z: 2.513}
@@ -11432,6 +11976,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sheep (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701262232907541883, guid: a08810514189443188530edfad5cd765,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sheep
       objectReference: {fileID: 0}
     - target: {fileID: 7684534758837526376, guid: a08810514189443188530edfad5cd765,
         type: 3}
@@ -12054,6 +12603,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep
       objectReference: {fileID: 0}
+    - target: {fileID: 6701262232907541883, guid: a08810514189443188530edfad5cd765,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sheep
+      objectReference: {fileID: 0}
     - target: {fileID: 7684534758837526376, guid: a08810514189443188530edfad5cd765,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12111,6 +12665,114 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a08810514189443188530edfad5cd765, type: 3}
+--- !u!1 &1917615756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1917615760}
+  - component: {fileID: 1917615759}
+  - component: {fileID: 1917615758}
+  - component: {fileID: 1917615757}
+  - component: {fileID: 1917615761}
+  m_Layer: 0
+  m_Name: pig detector
+  m_TagString: Detector
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1917615757
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917615756}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1917615758
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917615756}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1917615759
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917615756}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1917615760
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917615756}
+  m_LocalRotation: {x: -0, y: -0.059720885, z: -0, w: 0.99821514}
+  m_LocalPosition: {x: 496.3, y: 5.6, z: 729.6}
+  m_LocalScale: {x: 180, y: 10, z: 170}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 46
+  m_LocalEulerAnglesHint: {x: 0, y: -6.8480005, z: 0}
+--- !u!114 &1917615761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917615756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95330551da6bff247a8d87afbae316e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalTag: Pig
+  winnable: 0
 --- !u!1001 &1939308830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12771,6 +13433,41 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2094273258}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2095473534 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6701262232907541883, guid: a08810514189443188530edfad5cd765,
+    type: 3}
+  m_PrefabInstance: {fileID: 1800441108}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &2095473535
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095473534}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &2095473540
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095473534}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1001 &2095504031
 PrefabInstance:
   m_ObjectHideFlags: 0

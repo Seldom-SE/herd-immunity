@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Diagnostics;
+using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
 {
@@ -8,9 +9,13 @@ public class PlayerControls : MonoBehaviour
     public float speed;
     public float mouseSensitivity;
 
+    private GameObject[] detectors;
+    public bool winState = false;
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        detectors = GameObject.FindGameObjectsWithTag("Detector");
     }
 
     private void FixedUpdate()
@@ -41,10 +46,19 @@ public class PlayerControls : MonoBehaviour
     
     void Update() {
         ToggleGate();
+        // check win conditions
+        if(!winState){
+            foreach(GameObject detector in detectors){
+                if(detector.GetComponent<detectAnimal>().winnable){
+                    winState = true;
+                    UnityEngine.Debug.Log("WIN!");
+                }
+            }
+        }
     }
     
     void ToggleGate() {
-        Debug.DrawRay(transform.position, transform.forward * distanceToTouch, Color.magenta);
+        UnityEngine.Debug.DrawRay(transform.position, transform.forward * distanceToTouch, Color.magenta);
         
         if (Physics.Raycast(transform.position, transform.forward, out whatIHit, distanceToTouch)) {
             // Debug.Log("I'm touching a " + whatIHit.collider.gameObject.name + "!");

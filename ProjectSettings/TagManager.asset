@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Dog
   - Gate
+  - Fire
+  - Horse
+  - Pig
+  - Sheep
+  - Detector
   layers:
   - Default
   - TransparentFX
