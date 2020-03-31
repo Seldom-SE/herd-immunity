@@ -10061,6 +10061,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7518767915480380048, guid: 7ff9e4db718be4347b2d89c7bb8b3e6d,
+        type: 3}
+      propertyPath: m_AgentTypeID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7518767915480380049, guid: 7ff9e4db718be4347b2d89c7bb8b3e6d,
         type: 3}
       propertyPath: terrors.Array.data[0]
