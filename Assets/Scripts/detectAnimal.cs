@@ -14,6 +14,8 @@ public class detectAnimal : MonoBehaviour
 
     public GameObject completedMessage;
 
+    private int hassounded;
+
     public bool winnable = false;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,7 @@ public class detectAnimal : MonoBehaviour
         animalArr = GameObject.FindGameObjectsWithTag(animalTag);
         maxAnimals = animalArr.Length;
         completedMessage.SetActive(false);
+        hassounded = 0;
     }
 
     // Update is called once per frame
@@ -39,8 +42,11 @@ public class detectAnimal : MonoBehaviour
                 UnityEngine.Debug.Log(animalTag + " win");
                 winnable = true;
                 completedMessage.SetActive(true);
+
+                if(hassounded == 0){
                 AnimalSound.Play();
-                DestroySound(2f);
+                }
+                hassounded = 1;
             }
         }
     }
@@ -52,12 +58,5 @@ public class detectAnimal : MonoBehaviour
 
             winnable = false;
         }
-    }
-
-     IEnumerator DestroySound(float time)  //Prevent constant animal sound
-     {
-         yield return new WaitForSeconds(time);
- 
-        Destroy(AnimalSound);
     }
 }
