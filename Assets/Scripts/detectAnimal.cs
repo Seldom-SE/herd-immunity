@@ -55,7 +55,7 @@ public class detectAnimal : MonoBehaviour
         UnityEngine.Debug.Log("Something Exited");
         if(col.gameObject.tag == animalTag){
             animals--;
-
+            completedMessage.SetActive(false);
             winnable = false;
         }
     }
