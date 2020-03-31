@@ -8157,7 +8157,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxRange: 1
   minRange: 0.34
-  dimmingSlowness: 350
+  dimmingSlowness: 20
+  timerToStart: 210
+  timerAdjuster: 0
 --- !u!1 &1145290139
 GameObject:
   m_ObjectHideFlags: 0
