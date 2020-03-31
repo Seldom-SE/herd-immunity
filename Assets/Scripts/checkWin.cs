@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class checkWin : MonoBehaviour
 {
@@ -20,6 +21,10 @@ public class checkWin : MonoBehaviour
 
     private float gameLost;
 
+    public int sceneIndex;
+
+    private float gameWon;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +32,7 @@ public class checkWin : MonoBehaviour
         loseMessage.SetActive(false);
         winMessage.SetActive(false);
         gameLost = 0;
+        gameWon = 0;
     }
 
     // Update is called once per frame
@@ -44,6 +50,7 @@ public class checkWin : MonoBehaviour
             }
             if(winState && gameLost==0){
             UnityEngine.Debug.Log("WIN!");
+            gameWon = 1;
             winSound.Play();
             winMessage.SetActive(true);
 }
@@ -63,10 +70,20 @@ public class checkWin : MonoBehaviour
         }
 
 
-        if(gameTime < 0)
+        if(gameTime < 0 && gameWon== 0)
         { //LOSE
             loseMessage.SetActive(true);
             gameLost = 1;
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                SceneLoader(sceneIndex);
+            }
         }
+    }
+
+    public void SceneLoader(int SceneIndex)
+    {
+        SceneManager.LoadScene(SceneIndex);
     }
 }
